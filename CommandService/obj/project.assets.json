@@ -1051,31 +1051,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ecakmaz\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\YunusEmre\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Masters\\s4\\e3\\CommandService\\CommandService.csproj",
+      "projectUniqueName": "D:\\development\\microservice\\microservice\\CommandService\\CommandService.csproj",
       "projectName": "CommandService",
-      "projectPath": "D:\\Masters\\s4\\e3\\CommandService\\CommandService.csproj",
-      "packagesPath": "C:\\Users\\ecakmaz\\.nuget\\packages\\",
-      "outputPath": "D:\\Masters\\s4\\e3\\CommandService\\obj\\",
+      "projectPath": "D:\\development\\microservice\\microservice\\CommandService\\CommandService.csproj",
+      "packagesPath": "C:\\Users\\YunusEmre\\.nuget\\packages\\",
+      "outputPath": "D:\\development\\microservice\\microservice\\CommandService\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\ecakmaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\YunusEmre\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {},
-        "https://pkgs.dev.azure.com/fodevops/_packaging/FONUGET/nuget/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
@@ -1134,7 +1130,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
