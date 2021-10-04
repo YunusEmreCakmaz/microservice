@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using PlatformService.AsyncDataServices;
 using PlatformService.Data;
 using PlatformService.SyncDataServices.Http;
 
@@ -23,7 +24,7 @@ namespace PlatformService
         public IConfiguration Configuration { get; }
         private readonly IWebHostEnvironment _env;
 
-        public Startup(IConfiguration configuration,IWebHostEnvironment env)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
             _env = env;
@@ -32,14 +33,16 @@ namespace PlatformService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            if(_env.IsProduction()){
+            if (_env.IsProduction())
+            {
                 Console.WriteLine("--> Using SqlServer Db");
                 services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("PlatformsConn")));
             }
-            else{
+            else
+            {
                 Console.WriteLine("--> Using InMem Db");
                 services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
-             }
+            }
             services.AddScoped<IPlatformRepo, PlatformRepo>();
 
             services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>()
@@ -49,6 +52,7 @@ namespace PlatformService
                 ServerCertificateCustomValidationCallback =
                     (httpRequestMessage, cert, cetChain, policyErrors) => true
             });
+            services.AddSingleton<IMessageBusClient, MessageBusClient>();
 
             services.AddControllers();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

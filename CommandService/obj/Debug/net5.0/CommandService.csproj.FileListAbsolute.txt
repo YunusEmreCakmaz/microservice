@@ -76,3 +76,5 @@ D:\development\microservice\microservice\CommandService\obj\Debug\net5.0\scopedc
 D:\development\microservice\microservice\CommandService\obj\Debug\net5.0\CommandService.RazorTargetAssemblyInfo.cache
 D:\development\microservice\microservice\CommandService\obj\Debug\net5.0\CommandService.csproj.CopyComplete
 D:\development\microservice\microservice\CommandService\obj\Debug\net5.0\CommandService.genruntimeconfig.cache
+D:\development\microservice\microservice\CommandService\bin\Debug\net5.0\appsettings.Production.json
+D:\development\microservice\microservice\CommandService\bin\Debug\net5.0\RabbitMQ.Client.dll
